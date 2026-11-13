@@ -82,6 +82,50 @@ export const ALL_FRAMES: Frame[] = [
     image: "/images/frames/terracotta.jpg",
     aspect: "aspect-[4/5]",
   },
+  {
+    slug: "untamed",
+    name: "The Untamed",
+    detail: "Framed art print, grain-halftone",
+    note: "Original photographic print — No. 002 in a numbered observation series.",
+    description:
+      "A close, grainy halftone study of a lion mid-roar, printed black on raw white and set behind glass in a matte black frame. Part of our Observation series — original photographic prints, not wood-tone frames, for anyone who wants something with a bit more bite on the wall.",
+    sizes: ["11×14 in", "16×20 in", "A2"],
+    image: "/images/frames/untamed.jpg",
+    aspect: "aspect-[4/5]",
+  },
+  {
+    slug: "the-prince",
+    name: "The Prince",
+    detail: "Framed art print, grain-halftone",
+    note: "Original photographic print — No. 003 in a numbered observation series.",
+    description:
+      "A grainy halftone study built on a public-domain Renaissance portrait, printed black on raw white and set behind glass in a matte black frame. Part of our Observation series — original photographic prints, not wood-tone frames, for anyone who wants a bit of cold calculation on the wall.",
+    sizes: ["11×14 in", "16×20 in", "A2"],
+    image: "/images/frames/the-prince.jpg",
+    aspect: "aspect-[4/5]",
+  },
+  {
+    slug: "godfidence",
+    name: "Godfidence",
+    detail: "Framed art print, grain-halftone",
+    note: "Original photographic print — No. 004 in a numbered observation series.",
+    description:
+      "A grainy halftone study built on a public-domain Rembrandt self-portrait, printed black on raw white and set behind glass in a matte black frame. Part of our Observation series — original photographic prints, not wood-tone frames, for anyone who wants a little quiet certainty on the wall.",
+    sizes: ["11×14 in", "16×20 in", "A2"],
+    image: "/images/frames/godfidence.jpg",
+    aspect: "aspect-[4/5]",
+  },
+  {
+    slug: "pride",
+    name: "Pride",
+    detail: "Framed art print, grain-halftone",
+    note: "Original photographic print — No. 005 in a numbered observation series.",
+    description:
+      "A grainy halftone study built on Alexandre Cabanel's 1847 painting The Fallen Angel (public domain), printed black on raw white and set behind glass in a matte black frame. Part of our Observation series — original photographic prints, not wood-tone frames, for anyone who wants a little defiance on the wall.",
+    sizes: ["16×20 in", "A2", "A1"],
+    image: "/images/frames/pride.jpg",
+    aspect: "aspect-[4/3]",
+  },
 ];
 
 export const ESSENTIALS = ALL_FRAMES.filter((f) =>
@@ -89,7 +133,16 @@ export const ESSENTIALS = ALL_FRAMES.filter((f) =>
 );
 
 export const NEW_ARRIVALS = ALL_FRAMES.filter((f) =>
-  ["smoked-oak", "terracotta"].includes(f.slug)
+  [
+    "smoked-oak",
+    "terracotta",
+    "untamed",
+    "the-prince",
+    "godfidence",
+    "pride",
+  ].includes(
+    f.slug
+  )
 );
 
 export function getFrameBySlug(slug: string): Frame | undefined {
