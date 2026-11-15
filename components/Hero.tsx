@@ -166,7 +166,7 @@ function Frame({
           scale: scaleSettled,
           translateX: "-50%",
           translateY: "-50%",
-        } as React.CSSProperties
+        } as unknown as React.CSSProperties
       }
     >
       <motion.div
