@@ -20,15 +20,15 @@ export default function SectionHeading({
       }
     >
       <div>
-        <p className="text-xs uppercase tracking-[0.15em] text-ink-soft">
+        <p className="text-xs uppercase tracking-[0.15em] text-olive">
           {eyebrow}
         </p>
-        <h2 className="mt-2 font-serif text-3xl tracking-tight text-ink sm:text-4xl">
+        <h2 className="mt-2 font-serif text-3xl tracking-tight text-charcoal sm:text-4xl">
           {title}
         </h2>
       </div>
       {description && (
-        <p className="max-w-sm text-ink-soft sm:text-right">{description}</p>
+        <p className="max-w-sm text-stone sm:text-right">{description}</p>
       )}
     </div>
   );

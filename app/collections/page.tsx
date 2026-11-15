@@ -13,16 +13,16 @@ export const metadata: Metadata = {
 
 export default function CollectionsPage() {
   return (
-    <div className="min-h-screen bg-wall text-ink">
+    <div className="min-h-screen bg-ivory text-charcoal">
       <Nav />
       <main>
-        <section className="mx-auto max-w-6xl px-6 pt-28 pb-16 sm:pt-36 sm:pb-20 lg:px-10 2xl:max-w-[90rem] 2xl:px-16 2xl:pt-40">
-          <h1 className="font-serif text-5xl tracking-tight text-ink sm:text-6xl">
+        <section className="mx-auto max-w-6xl px-6 pt-32 pb-16 sm:pt-40 sm:pb-20 lg:px-10 2xl:max-w-[90rem] 2xl:px-16 2xl:pt-44">
+          <h1 className="font-serif text-5xl tracking-tight text-charcoal sm:text-6xl">
             Collections
           </h1>
-          <p className="mt-4 max-w-md text-ink-soft">
-            Two ways to shop — the shapes we cut most, and what&apos;s just
-            landed in the workshop.
+          <p className="mt-4 max-w-md text-stone">
+            Two ways to shop — the prints people come back for, and
+            what&apos;s just landed in the studio.
           </p>
         </section>
 
@@ -30,7 +30,7 @@ export default function CollectionsPage() {
           <SectionHeading
             eyebrow="The essentials"
             title="Most framed"
-            description="The five shapes we cut most often — the ones that work on nearly any wall."
+            description="The five prints people come back for — the ones that work on nearly any wall."
             align="split"
           />
           <FrameGrid frames={ESSENTIALS} />

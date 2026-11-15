@@ -1,23 +1,28 @@
 @import "tailwindcss";
 
 :root {
-  --wall: #edeae4;
-  --wall-dim: #e3dfd6;
-  --ink: #1a1816;
-  --ink-soft: #55504a;
-  --accent: #b5502c;
-  --accent-ink: #f4ece6;
-  --bench: #141210;
+  /* editorial gallery palette — warm, light, restrained */
+  --ivory: #f7f5f0;
+  --beige: #e8e1d6;
+  --charcoal: #252525;
+  --stone: #8a8378;
+  --olive: #777a64;
+  --olive-dim: #5c5e4e;
+  --accent: #c8202c;
+  --accent-dim: #7a1018;
+  --ivory-on-dark: #f3efe7;
 }
 
 @theme inline {
-  --color-wall: var(--wall);
-  --color-wall-dim: var(--wall-dim);
-  --color-ink: var(--ink);
-  --color-ink-soft: var(--ink-soft);
+  --color-ivory: var(--ivory);
+  --color-beige: var(--beige);
+  --color-charcoal: var(--charcoal);
+  --color-stone: var(--stone);
+  --color-olive: var(--olive);
+  --color-olive-dim: var(--olive-dim);
   --color-accent: var(--accent);
-  --color-accent-ink: var(--accent-ink);
-  --color-bench: var(--bench);
+  --color-accent-dim: var(--accent-dim);
+  --color-ivory-on-dark: var(--ivory-on-dark);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-serif: var(--font-fraunces);
@@ -28,9 +33,14 @@ html {
 }
 
 body {
-  background: var(--wall);
-  color: var(--ink);
+  background: var(--ivory);
+  color: var(--charcoal);
   font-family: var(--font-sans);
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--ivory-on-dark);
 }
 
 @media (prefers-reduced-motion: reduce) {

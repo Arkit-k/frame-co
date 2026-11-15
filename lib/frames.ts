@@ -1,3 +1,5 @@
+export type Series = "Observation" | "Field Notes";
+
 export type Frame = {
   slug: string;
   name: string;
@@ -7,81 +9,10 @@ export type Frame = {
   sizes: string[];
   image: string;
   aspect: string;
+  series: Series;
 };
 
 export const ALL_FRAMES: Frame[] = [
-  {
-    slug: "walnut",
-    name: "The Walnut",
-    detail: "Solid walnut, satin",
-    description:
-      "Our most-requested frame. Solid walnut with a warm, even grain and a satin oil finish that deepens slightly over the first year. Works equally well holding a single print or sitting in a row of three.",
-    sizes: ["8×10 in", "11×14 in", "16×20 in", "A3", "A2"],
-    image: "/images/frames/walnut.jpg",
-    aspect: "aspect-[3/4]",
-  },
-  {
-    slug: "ash",
-    name: "The Ash",
-    detail: "White ash, matte black",
-    description:
-      "White ash underneath, finished in a matte black that doesn't shine under gallery lighting. Thin profile, square-cut corners — built for black-and-white photography and line drawings.",
-    sizes: ["8×10 in", "11×14 in", "16×20 in", "A3"],
-    image: "/images/frames/ash.jpg",
-    aspect: "aspect-square",
-  },
-  {
-    slug: "oak",
-    name: "The Oak",
-    detail: "European oak, raw",
-    description:
-      "European oak, left raw and only lightly sealed so the grain stays visible and pale. The lightest frame we make — it reads almost invisible against a white wall, letting the piece inside do the talking.",
-    sizes: ["8×10 in", "11×14 in", "16×20 in", "A3", "A2"],
-    image: "/images/frames/oak.jpg",
-    aspect: "aspect-[4/5]",
-  },
-  {
-    slug: "ink",
-    name: "The Ink",
-    detail: "Blackened oak, ink wash",
-    description:
-      "Oak taken through an ink-wash process that darkens the grain without hiding it entirely — closer to charcoal than true black. A quieter alternative to lacquered black for moodier rooms.",
-    sizes: ["8×10 in", "11×14 in", "16×20 in"],
-    image: "/images/frames/ink.jpg",
-    aspect: "aspect-[3/4]",
-  },
-  {
-    slug: "brass",
-    name: "The Brass",
-    detail: "Ash core, brass edge",
-    description:
-      "An ash core wrapped in a brushed brass edge that's allowed to tarnish naturally rather than lacquered shut. Expect the warmth to shift slightly over a few years — that's the point.",
-    sizes: ["8×10 in", "11×14 in", "16×20 in"],
-    image: "/images/frames/brass.jpg",
-    aspect: "aspect-[5/6]",
-  },
-  {
-    slug: "smoked-oak",
-    name: "The Smoked Oak",
-    detail: "Smoked European oak, wax finish",
-    note: "Darker grain, deeper shadow line — made for black-and-white prints.",
-    description:
-      "Oak smoked before finishing, which pulls the grain toward a deep coffee brown and sharpens the shadow line along the rebate. A heavier, more formal frame than The Walnut.",
-    sizes: ["11×14 in", "16×20 in", "A2"],
-    image: "/images/frames/smoked-oak.jpg",
-    aspect: "aspect-[4/5]",
-  },
-  {
-    slug: "terracotta",
-    name: "The Terracotta",
-    detail: "Ash core, terracotta lacquer",
-    note: "Our first colour run. Small batch, limited to 40 pieces.",
-    description:
-      "Our first run outside natural wood tones — an ash core lacquered in a muted, clay-toned terracotta. Small batch, hand-sprayed in-house, limited to 40 pieces while we see how it's received.",
-    sizes: ["8×10 in", "11×14 in", "16×20 in"],
-    image: "/images/frames/terracotta.jpg",
-    aspect: "aspect-[4/5]",
-  },
   {
     slug: "untamed",
     name: "The Untamed",
@@ -92,6 +23,7 @@ export const ALL_FRAMES: Frame[] = [
     sizes: ["11×14 in", "16×20 in", "A2"],
     image: "/images/frames/untamed.jpg",
     aspect: "aspect-[4/5]",
+    series: "Observation",
   },
   {
     slug: "the-prince",
@@ -103,6 +35,7 @@ export const ALL_FRAMES: Frame[] = [
     sizes: ["11×14 in", "16×20 in", "A2"],
     image: "/images/frames/the-prince.jpg",
     aspect: "aspect-[4/5]",
+    series: "Observation",
   },
   {
     slug: "godfidence",
@@ -114,6 +47,7 @@ export const ALL_FRAMES: Frame[] = [
     sizes: ["11×14 in", "16×20 in", "A2"],
     image: "/images/frames/godfidence.jpg",
     aspect: "aspect-[4/5]",
+    series: "Observation",
   },
   {
     slug: "pride",
@@ -125,26 +59,127 @@ export const ALL_FRAMES: Frame[] = [
     sizes: ["16×20 in", "A2", "A1"],
     image: "/images/frames/pride.jpg",
     aspect: "aspect-[4/3]",
+    series: "Observation",
+  },
+  {
+    slug: "home",
+    name: "Ye Hai Mumbai, Meri Jaan",
+    detail: "Framed art print, full colour",
+    note: "Original photography — Field Notes, shot on site in Mumbai.",
+    description:
+      "A cinematic colour grade on an original photograph of the Mumbai Municipal Corporation building against a brilliant blue sky. Part of our Field Notes series — real places, shot by us, not stock, not AI, set behind glass in a slim black frame.",
+    sizes: ["11×14 in", "16×20 in", "A2"],
+    image: "/images/frames/home.jpg",
+    aspect: "aspect-[3/4]",
+    series: "Field Notes",
+  },
+  {
+    slug: "chase-the-light",
+    name: "Chase the Light",
+    detail: "Framed art print, full colour",
+    note: "Original photography — Field Notes, shot at golden hour.",
+    description:
+      "A cinematic colour grade on an original photograph of a sun-drenched forest road at golden hour. Part of our Field Notes series — real places, shot by us, not stock, not AI, set behind glass in a slim black frame.",
+    sizes: ["11×14 in", "16×20 in", "A2"],
+    image: "/images/frames/chase-the-light.jpg",
+    aspect: "aspect-[3/4]",
+    series: "Field Notes",
+  },
+  {
+    slug: "mumbai-after-dark",
+    name: "Mumbai After Dark",
+    detail: "Framed art print, full colour",
+    note: "Original photography — Field Notes, shot on site in Mumbai.",
+    description:
+      "A cinematic colour grade on an original night photograph of the Mumbai Municipal Corporation building lit up gold against the night sky. Part of our Field Notes series — real places, shot by us, not stock, not AI, set behind glass in a slim black frame.",
+    sizes: ["11×14 in", "16×20 in", "A2"],
+    image: "/images/frames/mumbai-after-dark.jpg",
+    aspect: "aspect-[16/9]",
+    series: "Field Notes",
+  },
+  {
+    slug: "beauty-is-beyond-money",
+    name: "Beauty Is Beyond Money",
+    detail: "Framed art print, full colour",
+    note: "Original photography — Field Notes, a street-side find in Mumbai.",
+    description:
+      "A cinematic colour grade on an original street photograph of a roadside sunflower stall, hand-painted sign and all. Part of our Field Notes series — real places, shot by us, not stock, not AI, set behind glass in a slim black frame.",
+    sizes: ["11×14 in", "16×20 in", "A2"],
+    image: "/images/frames/beauty-is-beyond-money.jpg",
+    aspect: "aspect-square",
+    series: "Field Notes",
+  },
+  {
+    slug: "everything-goes",
+    name: "Everything Goes",
+    detail: "Framed art print, full colour",
+    note: "Original photographic print — No. 006 in a numbered observation series.",
+    description:
+      "A cinematic colour grade built on a licensed photograph of a golden-hour meadow, paired with a soft italic line on impermanence. Part of our Observation series — original prints, not wood-tone frames, for anyone who wants a little stillness on the wall.",
+    sizes: ["16×20 in", "A2", "A1"],
+    image: "/images/frames/everything-goes.jpg",
+    aspect: "aspect-[2/1]",
+    series: "Observation",
   },
 ];
 
 export const ESSENTIALS = ALL_FRAMES.filter((f) =>
-  ["walnut", "ash", "oak", "ink", "brass"].includes(f.slug)
+  ["untamed", "the-prince", "godfidence", "pride", "home"].includes(f.slug)
 );
 
 export const NEW_ARRIVALS = ALL_FRAMES.filter((f) =>
   [
-    "smoked-oak",
-    "terracotta",
-    "untamed",
-    "the-prince",
-    "godfidence",
-    "pride",
-  ].includes(
-    f.slug
-  )
+    "chase-the-light",
+    "mumbai-after-dark",
+    "beauty-is-beyond-money",
+    "everything-goes",
+  ].includes(f.slug)
 );
+
+export const OBSERVATION = ALL_FRAMES.filter((f) => f.series === "Observation");
+export const FIELD_NOTES = ALL_FRAMES.filter((f) => f.series === "Field Notes");
 
 export function getFrameBySlug(slug: string): Frame | undefined {
   return ALL_FRAMES.find((f) => f.slug === slug);
+}
+
+// ---- pricing (by size, not per-product — a size costs the same to print/frame regardless of which piece) ----
+
+export const SIZE_PRICES: Record<string, number> = {
+  "11×14 in": 2499,
+  "16×20 in": 3999,
+  A2: 4799,
+  A1: 7999,
+};
+
+export const SIZE_DIMENSIONS_IN: Record<string, [number, number]> = {
+  "11×14 in": [11, 14],
+  "16×20 in": [16, 20],
+  A2: [16.5, 23.4],
+  A1: [23.4, 33.1],
+};
+
+export function getPriceForSize(frame: Frame, size: string): number {
+  return SIZE_PRICES[size] ?? Math.min(...frame.sizes.map((s) => SIZE_PRICES[s] ?? Infinity));
+}
+
+export function getStartingPrice(frame: Frame): number {
+  return Math.min(...frame.sizes.map((s) => SIZE_PRICES[s] ?? Infinity));
+}
+
+export function formatINR(amount: number): string {
+  return `₹${amount.toLocaleString("en-IN")}`;
+}
+
+// ---- orientation, derived from the aspect class rather than stored redundantly ----
+
+export type Orientation = "portrait" | "landscape" | "square";
+
+export function getOrientation(frame: Frame): Orientation {
+  if (frame.aspect.includes("square")) return "square";
+  const match = frame.aspect.match(/aspect-\[(\d+)\/(\d+)\]/);
+  if (!match) return "portrait";
+  const [, w, h] = match.map(Number) as unknown as [number, number, number];
+  if (w === h) return "square";
+  return w > h ? "landscape" : "portrait";
 }
