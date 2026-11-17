@@ -1,5 +1,5 @@
 type SectionHeadingProps = {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   description?: string;
   align?: "left" | "split";
@@ -20,10 +20,12 @@ export default function SectionHeading({
       }
     >
       <div>
-        <p className="text-xs uppercase tracking-[0.15em] text-olive">
-          {eyebrow}
-        </p>
-        <h2 className="mt-2 font-serif text-3xl tracking-tight text-charcoal sm:text-4xl">
+        {eyebrow && (
+          <p className="text-xs uppercase tracking-[0.15em] text-olive">
+            {eyebrow}
+          </p>
+        )}
+        <h2 className={`font-serif text-3xl tracking-tight text-charcoal sm:text-4xl ${eyebrow ? "mt-2" : ""}`}>
           {title}
         </h2>
       </div>

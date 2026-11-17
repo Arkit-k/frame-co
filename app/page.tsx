@@ -1,8 +1,6 @@
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
-import FeaturedCollections from "@/components/FeaturedCollections";
-import GalleryRow from "@/components/GalleryRow";
-import EditorialSection from "@/components/EditorialSection";
+import BestsellerCarousel from "@/components/BestsellerCarousel";
 import ScaleStrip from "@/components/ScaleStrip";
 import NewArrivals from "@/components/NewArrivals";
 import InspirationGallery from "@/components/InspirationGallery";
@@ -15,9 +13,7 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
-        <FeaturedCollections />
-        <GalleryRow />
-        <EditorialSection />
+        <BestsellerCarousel />
         <ScaleStrip />
         <NewArrivals />
         <InspirationGallery />

@@ -110,6 +110,18 @@ export const ALL_FRAMES: Frame[] = [
     series: "Field Notes",
   },
   {
+    slug: "legend",
+    name: "Average Never Made a Legend",
+    detail: "Framed art print, grain-halftone",
+    note: "Original photographic print — No. 007 in a numbered observation series.",
+    description:
+      "A grainy halftone study of a bronc rearing against an open sky, built on a free-licensed rodeo photograph, printed black on raw white with a red grain wash and set behind glass in a matte black frame. Part of our Observation series — original photographic prints, not wood-tone frames, for anyone who wants a little defiance on the wall.",
+    sizes: ["11×14 in", "16×20 in", "A2"],
+    image: "/images/frames/legend.jpg",
+    aspect: "aspect-[4/5]",
+    series: "Observation",
+  },
+  {
     slug: "everything-goes",
     name: "Everything Goes",
     detail: "Framed art print, full colour",

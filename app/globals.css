@@ -23,7 +23,7 @@
   --color-accent: var(--accent);
   --color-accent-dim: var(--accent-dim);
   --color-ivory-on-dark: var(--ivory-on-dark);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-sans-body);
   --font-mono: var(--font-geist-mono);
   --font-serif: var(--font-fraunces);
 }
